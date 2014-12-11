@@ -1,22 +1,22 @@
-#docker-elasticsearch
+# DevDB Elasticsearch
 
-Elasticsearch 1.4.1 (Java7) in a box.
+Elasticsearch 1.4.1 in a docker container - for when you need a quick ES node for development.
 
 ## Single Node with Ephemeral Storage
 
 ```
-docker pull abh1nav/elasticsearch
-docker run -d --name es -p 9200:9200 abh1nav/elasticsearch
+docker pull devdb/elasticsearch:latest
+docker run -d --name elasticsearch -p 9200:9200 devdb/elasticsearch
 ```
 
 ## Single node with Persistent Storage
 
 ```
-docker pull abh1nav/elasticsearch
-docker run -d --name es -p 9200:9200 -v /home/asdf/elasticsearch-data:/opt/elasticsearch/data abh1nav/elasticsearch
+docker pull devdb/elasticsearch:latest
+docker run -d --name elasticsearch -p 9200:9200 -v /tmp/elasticsearch:/opt/elasticsearch/data devdb/elasticsearch
 ```
 
-where `/home/asdf/elasticsearch-data` is where you want it to dump all the data files on your host.
+where `/tmp/elasticsearch` is where you want it to dump all the data files on your host.
 
 ## Cluster
 
