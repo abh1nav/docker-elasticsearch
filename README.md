@@ -1,6 +1,6 @@
 # DevDB Elasticsearch
 
-Elasticsearch 1.4.2 in a docker container - for when you need a quick ES node for development.
+Elasticsearch 1.5.1 in a docker container - for when you need a quick ES node for development.
 
 ## Single Node with Ephemeral Storage
 
